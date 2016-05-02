@@ -1,0 +1,27 @@
+.MyClass{
+  color: dodgerblue;
+}
+
+body {
+  text-align: center;
+  background: rgb(40,50,55);
+  color: rgb(154,203,246);
+}
+
+.sectionClass {
+  border: 1px solid rgb(154,203,246);
+}
+
+.headerClass {
+  color: rgb(146,200,194);
+}
+
+li {
+  list-style-type: none;
+}
+
+.itemForm input{
+  display: block;
+  margin: 0 auto;
+  margin-bottom:10px;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="directiveApp">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+  <link rel="stylesheet" href="style/style.css">
+
+  <script type="text/javascript" src= "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+
+  <!-- module -->
+  <script src="js/modules/directiveModule.js"></script>
+
+  <!-- directives -->
+  <script src="js/directives/looseCoupleDirective.js"></script>
+  <script src="js/directives/tightCoupleDirective.js"></script>
+  <script src="js/directives/stringDirective.js"></script>
+  <script src="js/directives/linkDirective.js"></script>
+
+  <!-- controllers -->
+  <script src="js/controllers/MainController.js"></script>
+
+
+  <title>Angular Directives</title>
+</head>
+<body>
+
+
+  <div ng-controller="MainController">
+
+    <loose-couple-directive list="vm.myList"></loose-couple-directive>
+
+    <tight-couple-directive></tight-couple-directive>
+
+    <!-- Without {{}} some-text will be equal to the string value -->
+    <string-directive some-text="message"></string-directive>
+
+    <!-- With {{}} some-text will be equal to the interpolated value of a scope variable -->
+    <!-- <string-directive some-text="{{message}}"></string-directive> -->
+
+    <link-directive></link-directive>
+
+  </div>
+</body>
+</html>
