@@ -4,7 +4,7 @@ angular.module('directiveApp')
     scope: {
       someText: '@',
     },
-    templateUrl: './templates/stringTemplate.html'
+    templateUrl: './views/directive_templates/stringTemplate.html'
   }
 
 }]);

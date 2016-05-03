@@ -1,1 +1,1 @@
-angular.module('directiveApp', []);
+angular.module('directiveApp', ['ngStorage', 'ui.router']);

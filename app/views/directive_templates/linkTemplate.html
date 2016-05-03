@@ -6,24 +6,25 @@
     <form name='form' class="itemForm" novalidate>
 
       <label>New Item Name</label>
-      <input type="text" ng-model="newItem.name" required>
+      <input type="text" ng-model="vm.newItem.name" required>
 
       <label>New Item Color</label>
-      <input type="text" ng-model="newItem.color" required>
+      <input type="text" ng-model="vm.newItem.color" required>
 
-      <input type="submit" ng-click="addItem()" value="Add Item" ng-disabled="form.$invalid">
+      <input type="submit" ng-click="vm.addItem()" value="Add Item" ng-disabled="form.$invalid">
 
     </form>
   </div>
 
 
-  <div ng-if="items.length > 0">
+  <div ng-if="vm.items.length > 0">
     <h1 class="headerClass">Items: </h1>
     <ul>
-      <li ng-repeat="item in items">
+      <li ng-repeat="item in vm.items">
         <span ng-bind="item.color + ' ' + item.name"></span>
       </li>
     </ul>
+
   </div>
 
 </div>

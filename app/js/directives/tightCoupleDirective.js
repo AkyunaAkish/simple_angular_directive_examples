@@ -2,7 +2,7 @@ angular.module('directiveApp')
 .directive('tightCoupleDirective', [function(){
 
   return {
-    templateUrl: './templates/tightCoupleTemplate.html'
+    templateUrl: './views/directive_templates/tightCoupleTemplate.html'
   }
 
 }])

@@ -1,16 +1,19 @@
 angular.module('directiveApp')
-.directive('linkDirective', ['$log', function($log){
+.directive('linkDirective', ['$log','itemService', function($log,itemService){
   return {
     scope: {},
-    templateUrl: './templates/linkTemplate.html',
+    templateUrl: './views/directive_templates/linkTemplate.html',
     link: function(scope,element,attrs){
-      scope.items = [];
-      
+
+      scope.vm = {};
+      scope.vm.items = itemService.getItems();
+
+      // You have direct access to the element within your directives
       element.addClass('MyClass');
 
-      scope.addItem = function(){
-        scope.items.push(scope.newItem);
-        scope.newItem = null;
+      scope.vm.addItem = function(){
+        itemService.addItem(scope.vm.newItem);
+        scope.vm.newItem = null;
       }
 
     }
