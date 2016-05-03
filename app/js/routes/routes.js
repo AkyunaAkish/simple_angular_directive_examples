@@ -1,5 +1,5 @@
 angular.module('directiveApp')
-.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
+.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   $urlRouterProvider.otherwise("/");
 
@@ -10,4 +10,4 @@ angular.module('directiveApp')
     controller: "MainController"
   })
 
-});
+}]);
